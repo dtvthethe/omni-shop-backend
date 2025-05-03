@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  omni-shop-db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: omni-shop-db
+    ports:
+      - "5432:5432"
+    networks:
+      - omni-shop-network
+
+networks:
+  omni-shop-network:

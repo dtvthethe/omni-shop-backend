@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  omni-shop-backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+    depends_on:
+      - postgres
+    networks:
+      - omni-shop-system_omni-shop-network
+networks:
+  omni-shop-system_omni-shop-network:
+    external: true # causes the network to be created outside of the docker-compose file (omni-shop-system project)
