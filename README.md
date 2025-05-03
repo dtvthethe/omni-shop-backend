@@ -1,1 +1,6 @@
-# omni-backend
+# omni-shop-backend
+
+## build project
+```bash
+./gradlew build
+```
