@@ -1,1 +1,1 @@
-rootProject.name = "backend"
+rootProject.name = "omni-shop-backend"
